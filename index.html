@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <div id="output"></div>
+    <input type="number" name="myNum" min="0" mox="100" value="4">
+    <input type="button" id="testBtn" value="check">
+
+    <script>
+        const output = document.getElementById('output');
+        const testBtn = document.getElementById('testBtn');
+        testBtn.addEventListener('click',checkVal);
+        function checkVal(){
+            let val = document.querySelector('input[name="myNum"]').value; 
+            output.innerHTML = numChecker(val);
+        }
+
+        function numChecker(num){
+            let message;
+            if(num % 2){
+                message = 'It was ODD!';
+            }else{
+                message = "Even nice";
+            }
+            return message;
+        }
+
+
+
+    </script>
+
+<p></p>
+
+<a href="http://csnet.southtexascollege.edu/localuser/wpena1/">Go Back to HomePage</a>
+<p>William Pena</p>
+    
+</body>
+</html>
